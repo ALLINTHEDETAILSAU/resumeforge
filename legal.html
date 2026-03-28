@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="ResumeForge legal pages including Terms of Service, Privacy Policy, Refund Policy and Contact information." />
+<meta name="robots" content="noindex" />
+<title>Legal - ResumeForge</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --ink:         #0d0d0d;
+  --ink-soft:    #1a1814;
+  --cream:       #f5f0e8;
+  --mist:        #8a8880;
+  --mist-light:  #b0aca4;
+  --gold:        #c9a84c;
+  --gold-light:  #e8c96a;
+  --gold-dim:    rgba(201,168,76,0.13);
+  --border:      rgba(201,168,76,0.22);
+  --border-soft: rgba(255,255,255,0.07);
+  --ff-display:  'Playfair Display', Georgia, serif;
+  --ff-body:     'DM Sans', sans-serif;
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --radius:      12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--ink);
+  color: var(--cream);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; top: -100px; left: 1rem;
+  background: var(--gold); color: var(--ink);
+  padding: 0.6rem 1.2rem; border-radius: 8px;
+  font-weight: 700; font-size: 0.9rem; z-index: 9999;
+  text-decoration: none; transition: top 0.2s;
+}
+.skip-link:focus { top: 1rem; }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- HEADER ---- */
+header {
+  position: relative; z-index: 2;
+  padding: 1.75rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1100px; margin: 0 auto;
+  border-bottom: 1px solid var(--border-soft);
+}
+.logo {
+  font-family: var(--ff-display); font-size: 1.55rem;
+  font-weight: 900; letter-spacing: -0.02em;
+  color: var(--gold); text-decoration: none;
+}
+.logo span { color: var(--cream); }
+
+.back-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border); border-radius: 100px;
+  background: transparent; color: var(--mist-light);
+  font-family: var(--ff-body); font-size: 0.82rem; font-weight: 500;
+  text-decoration: none; cursor: pointer;
+  transition: border-color 0.18s, color 0.18s;
+}
+.back-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ---- PAGE LAYOUT ---- */
+.page-wrap {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+/* ---- PAGE HERO ---- */
+.page-hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  animation: fadeUp 0.6s var(--ease) both;
+}
+.page-hero h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900; letter-spacing: -0.02em;
+  color: var(--cream); margin-bottom: 1rem;
+}
+.page-hero p {
+  font-size: 0.92rem; color: var(--mist);
+  max-width: 520px; margin: 0 auto; line-height: 1.7;
+}
+.gold-rule { width: 50px; height: 1px; background: var(--gold); margin: 2rem auto 0; }
+
+/* ---- TAB NAV ---- */
+.tab-nav {
+  display: flex; gap: 0.4rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 0;
+  animation: fadeUp 0.6s 0.1s var(--ease) both;
+}
+.tab-nav-btn {
+  padding: 0.7rem 1.2rem;
+  background: transparent; border: none; border-bottom: 2px solid transparent;
+  color: var(--mist); font-family: var(--ff-body); font-size: 0.88rem; font-weight: 500;
+  cursor: pointer; transition: color 0.18s, border-color 0.18s;
+  margin-bottom: -1px; white-space: nowrap;
+}
+.tab-nav-btn:hover { color: var(--cream); }
+.tab-nav-btn[aria-selected="true"] {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  font-weight: 600;
+}
+
+/* ---- PANEL ---- */
+.legal-panel {
+  animation: fadeUp 0.5s var(--ease) both;
+}
+.legal-panel[hidden] { display: none; }
+
+/* ---- PROSE ---- */
+.prose h2 {
+  font-family: var(--ff-display);
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 0.5rem;
+}
+.prose .effective-date {
+  font-size: 0.78rem; color: var(--mist);
+  margin-bottom: 2rem;
+  display: block;
+}
+.prose h3 {
+  font-family: var(--ff-display);
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--gold); margin: 2rem 0 0.6rem;
+}
+.prose p {
+  font-size: 0.9rem; color: var(--mist-light);
+  margin-bottom: 1rem; line-height: 1.75;
+}
+.prose ul, .prose ol {
+  margin: 0.5rem 0 1rem 1.4rem;
+}
+.prose li {
+  font-size: 0.9rem; color: var(--mist-light);
+  margin-bottom: 0.45rem; line-height: 1.7;
+}
+.prose a {
+  color: var(--gold); text-decoration: underline;
+  transition: color 0.18s;
+}
+.prose a:hover { color: var(--gold-light); }
+
+.divider {
+  height: 1px; background: var(--border-soft);
+  margin: 2.5rem 0;
+}
+
+/* ---- CONTACT CARD ---- */
+.contact-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+  margin: 1.5rem 0;
+}
+@media (max-width: 540px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-card {
+  background: var(--ink-soft); border: 1px solid var(--border-soft);
+  border-radius: var(--radius); padding: 1.4rem;
+}
+.contact-card .c-icon {
+  font-size: 1.5rem; margin-bottom: 0.6rem; display: block; line-height: 1;
+}
+.contact-card h4 {
+  font-family: var(--ff-display); font-size: 0.95rem;
+  font-weight: 700; color: var(--cream); margin-bottom: 0.35rem;
+}
+.contact-card p {
+  font-size: 0.82rem; color: var(--mist); margin: 0; line-height: 1.55;
+}
+.contact-card a {
+  color: var(--gold); text-decoration: none; font-weight: 500;
+}
+.contact-card a:hover { text-decoration: underline; }
+
+.contact-form-wrap {
+  background: var(--ink-soft); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem;
+  margin-top: 1.5rem; position: relative; overflow: hidden;
+}
+.contact-form-wrap::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.form-row { margin-bottom: 1.1rem; }
+.form-row label {
+  display: block; font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.45rem;
+}
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border); border-radius: 8px;
+  color: var(--cream); font-family: var(--ff-body);
+  font-size: 0.9rem; padding: 0.8rem 1rem;
+  outline: none; transition: border-color 0.2s; line-height: 1.5;
+  resize: vertical;
+}
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus { border-color: var(--gold); }
+.form-row input::placeholder,
+.form-row textarea::placeholder { color: rgba(138,136,128,0.55); }
+.form-row select { appearance: none; cursor: pointer; }
+.form-row select option { background: #1a1814; }
+
+.form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 500px) { .form-cols { grid-template-columns: 1fr; } }
+
+.btn-submit {
+  width: 100%; padding: 1rem 2rem;
+  background: var(--gold); color: var(--ink);
+  border: none; border-radius: var(--radius);
+  font-family: var(--ff-body); font-size: 1rem; font-weight: 700;
+  cursor: pointer; transition: background 0.18s, transform 0.12s;
+  margin-top: 0.5rem;
+}
+.btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-submit:active { transform: translateY(0); }
+
+.form-success {
+  display: none; text-align: center;
+  padding: 2rem; color: var(--mist-light);
+}
+.form-success .tick {
+  font-size: 2.5rem; display: block; margin-bottom: 0.75rem;
+}
+.form-success p { font-size: 0.9rem; color: var(--mist-light); }
+
+/* ---- HIGHLIGHT BOX ---- */
+.highlight-box {
+  background: var(--gold-dim); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.25rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.highlight-box p { margin: 0; font-size: 0.88rem; color: var(--cream); line-height: 1.7; }
+
+/* ---- FOOTER ---- */
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border-soft);
+  padding: 2rem; text-align: center;
+}
+.footer-inner { max-width: 860px; margin: 0 auto; }
+.footer-logo {
+  font-family: var(--ff-display); font-size: 1.2rem;
+  font-weight: 700; color: var(--gold); margin-bottom: 0.75rem;
+}
+.footer-logo span { color: var(--cream); }
+footer p { font-size: 0.75rem; color: var(--mist); line-height: 1.7; }
+footer a { color: var(--mist); text-decoration: underline; transition: color 0.18s; }
+footer a:hover { color: var(--gold); }
+.footer-links {
+  display: flex; justify-content: center; gap: 1.5rem;
+  margin-bottom: 0.85rem; flex-wrap: wrap;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 600px) {
+  header { padding: 1.25rem; }
+  .page-hero { padding: 2.5rem 0 2rem; }
+  .contact-form-wrap { padding: 1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#legal-main">Skip to main content</a>
+
+<header role="banner">
+  <a href="resume-tailor.html" class="logo" aria-label="ResumeForge home">Resume<span>Forge</span></a>
+  <a href="resume-tailor.html" class="back-btn" aria-label="Back to the main page">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Home
+  </a>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-hero">
+    <h1>Legal and Support</h1>
+    <p>Everything you need to know about how ResumeForge operates, how we handle your information, and how to get in touch.</p>
+    <div class="gold-rule" aria-hidden="true"></div>
+  </div>
+
+  <!-- Tab navigation -->
+  <nav aria-label="Legal sections" class="tab-nav" role="tablist">
+    <button class="tab-nav-btn" role="tab" id="tab-terms"   aria-selected="true"  aria-controls="panel-terms"   onclick="showPanel('terms')">Terms of Service</button>
+    <button class="tab-nav-btn" role="tab" id="tab-privacy" aria-selected="false" aria-controls="panel-privacy" onclick="showPanel('privacy')">Privacy Policy</button>
+    <button class="tab-nav-btn" role="tab" id="tab-refund"  aria-selected="false" aria-controls="panel-refund"  onclick="showPanel('refund')">Refund Policy</button>
+    <button class="tab-nav-btn" role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" onclick="showPanel('contact')">Contact Us</button>
+  </nav>
+
+  <main id="legal-main">
+
+    <!-- ==============================
+         TERMS OF SERVICE
+    ============================== -->
+    <section class="legal-panel" id="panel-terms" role="tabpanel" aria-labelledby="tab-terms">
+      <div class="prose">
+        <h2>Terms of Service</h2>
+        <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
+
+        <p>
+          Please read these Terms of Service carefully before using the ResumeForge website and service. By accessing or using our service, you agree to be bound by these terms. If you do not agree, do not use the service.
+        </p>
+
+        <h3>1. About the Service</h3>
+        <p>
+          ResumeForge provides an online resume tailoring service that rewrites and reformats your existing resume to better align with a specific job listing you provide. The service is operated from Australia and is available to users across Australia and internationally.
+        </p>
+        <p>
+          ResumeForge is not a recruitment agency and does not guarantee employment outcomes. We provide a document preparation service only.
+        </p>
+
+        <h3>2. Eligibility</h3>
+        <p>
+          You must be at least 18 years of age to use this service. By using ResumeForge you confirm that you are 18 or older and have the legal capacity to enter into a binding agreement.
+        </p>
+
+        <h3>3. Your Content</h3>
+        <p>
+          You retain ownership of any resume or document content you upload. By submitting your content you grant ResumeForge a limited, non-exclusive licence to process and rewrite that content for the sole purpose of delivering your order. We do not use your personal resume data for any other purpose.
+        </p>
+        <p>
+          You are responsible for ensuring that the information in your resume is truthful and accurate. ResumeForge rewrites the language and structure of your resume but does not verify the factual accuracy of the content you provide.
+        </p>
+
+        <h3>4. Acceptable Use</h3>
+        <p>You agree not to use this service to:</p>
+        <ul>
+          <li>Submit false, misleading or fraudulent information</li>
+          <li>Attempt to gain unauthorised access to our systems</li>
+          <li>Use automated tools, bots or scripts to abuse the service</li>
+          <li>Resell or redistribute the output of the service without our written consent</li>
+          <li>Violate any applicable Australian law or regulation</li>
+        </ul>
+
+        <h3>5. Payment</h3>
+        <p>
+          All prices are displayed in Australian dollars (AUD) inclusive of GST where applicable. Payment is processed securely by Stripe. You must provide valid payment details at the time of purchase. Charges are applied immediately upon completing your order.
+        </p>
+
+        <h3>6. Delivery</h3>
+        <p>
+          Your tailored resume is made available for download immediately after successful payment. It is your responsibility to download the file at the time of purchase. ResumeForge does not store your completed resume after your session ends.
+        </p>
+
+        <h3>7. Intellectual Property</h3>
+        <p>
+          The ResumeForge brand, website design, and underlying technology are the property of ResumeForge and are protected by Australian intellectual property law. The tailored resume document delivered to you is yours to use freely for personal job application purposes.
+        </p>
+
+        <h3>8. Disclaimer of Warranties</h3>
+        <p>
+          The service is provided on an "as is" basis. ResumeForge makes no warranty that the service will be uninterrupted, error-free, or that the tailored resume will result in employment. To the maximum extent permitted by Australian Consumer Law, we disclaim all implied warranties.
+        </p>
+        <p>
+          Nothing in these terms excludes, restricts or modifies any rights or remedies you may have under the Australian Consumer Law, including any non-excludable guarantees.
+        </p>
+
+        <h3>9. Limitation of Liability</h3>
+        <p>
+          To the extent permitted by law, ResumeForge's total liability to you for any claim arising from use of the service is limited to the amount you paid for the specific order that gave rise to the claim.
+        </p>
+
+        <h3>10. Governing Law</h3>
+        <p>
+          These terms are governed by the laws of Western Australia, Australia. Any disputes are subject to the non-exclusive jurisdiction of the courts of Western Australia.
+        </p>
+
+        <h3>11. Changes to These Terms</h3>
+        <p>
+          We may update these terms from time to time. The effective date at the top of this page will reflect any changes. Continued use of the service after changes are posted constitutes your acceptance of the revised terms.
+        </p>
+
+        <h3>12. Contact</h3>
+        <p>
+          For questions about these terms, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         PRIVACY POLICY
+    ============================== -->
+    <section class="legal-panel" id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy" hidden>
+      <div class="prose">
+        <h2>Privacy Policy</h2>
+        <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
+
+        <p>
+          ResumeForge is committed to protecting your personal information in accordance with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth). This policy explains what information we collect, how we use it, and your rights.
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Short version:</strong> We collect only what we need to deliver your resume. We do not sell your data. Your resume content is processed to complete your order and is not stored after your session.</p>
+        </div>
+
+        <h3>1. Information We Collect</h3>
+        <p>We may collect the following types of information:</p>
+        <ul>
+          <li><strong>Resume content</strong> - the file or text you upload to use the service</li>
+          <li><strong>Job listing content</strong> - the job description or URL you provide</li>
+          <li><strong>Payment information</strong> - processed entirely by Stripe. We do not receive or store your card number, expiry date or CVV</li>
+          <li><strong>Contact information</strong> - your name and email address if you contact us or submit a support request</li>
+          <li><strong>Usage data</strong> - standard web analytics including pages visited, browser type, device type, and general location (country or state level only)</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Deliver the resume tailoring service you have paid for</li>
+          <li>Process and verify your payment</li>
+          <li>Respond to your support enquiries</li>
+          <li>Improve the performance and reliability of our service</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+        <p>We do not use your resume content for marketing purposes, profiling, or any purpose other than fulfilling your order.</p>
+
+        <h3>3. Data Retention</h3>
+        <p>
+          Your resume content and the tailored output are not stored on our servers after your session ends. Please download your completed resume at the time of purchase. Payment transaction records are retained by Stripe in accordance with their own privacy policy and applicable financial regulations.
+        </p>
+
+        <h3>4. Third-Party Services</h3>
+        <p>We use the following third-party services to operate our platform:</p>
+        <ul>
+          <li><strong>Stripe</strong> - payment processing. Stripe is PCI-DSS compliant and their privacy policy is available at <a href="https://stripe.com/au/privacy" target="_blank" rel="noopener noreferrer">stripe.com/au/privacy</a></li>
+          <li><strong>Anthropic</strong> - the technology that powers our resume rewriting. Resume content is transmitted to Anthropic's API to generate the tailored output. Anthropic's privacy policy is available at <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
+          <li><strong>Google Fonts</strong> - used to load fonts on this website. No personal data is shared with Google through this service</li>
+        </ul>
+
+        <h3>5. Disclosure of Information</h3>
+        <p>
+          We do not sell, rent or trade your personal information to third parties. We may disclose your information where required by law, court order, or government authority, or where necessary to protect the rights and safety of ResumeForge or others.
+        </p>
+
+        <h3>6. Security</h3>
+        <p>
+          We take reasonable steps to protect any personal information we hold from misuse, loss, and unauthorised access. All data transmission between your browser and our service is encrypted using HTTPS. Payment data is handled entirely by Stripe and is never transmitted to or stored by ResumeForge.
+        </p>
+
+        <h3>7. Cookies and Tracking</h3>
+        <p>
+          We may use cookies or similar technologies to support basic website functionality. We do not use cookies to track you across other websites or build advertising profiles.
+        </p>
+
+        <h3>8. Your Rights</h3>
+        <p>Under the Australian Privacy Act you have the right to:</p>
+        <ul>
+          <li>Request access to any personal information we hold about you</li>
+          <li>Request correction of inaccurate or out-of-date information</li>
+          <li>Complain about how we have handled your personal information</li>
+        </ul>
+        <p>
+          To exercise any of these rights, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page and select "Privacy enquiry" as the subject. We will respond within 30 days.
+        </p>
+        <p>
+          If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
+        </p>
+
+        <h3>9. Changes to This Policy</h3>
+        <p>
+          We may update this privacy policy from time to time. The effective date at the top of this page will reflect any changes. We encourage you to review this policy periodically.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         REFUND POLICY
+    ============================== -->
+    <section class="legal-panel" id="panel-refund" role="tabpanel" aria-labelledby="tab-refund" hidden>
+      <div class="prose">
+        <h2>Refund Policy</h2>
+        <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
+
+        <p>
+          We want you to be happy with your tailored resume. Please read this policy carefully so you understand when refunds apply.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            <strong>Australian Consumer Law:</strong> Nothing in this refund policy limits or excludes your rights under the Australian Consumer Law (ACL), including your right to a remedy for a failure that is a major failure or is not of acceptable quality.
+          </p>
+        </div>
+
+        <h3>1. Nature of the Service</h3>
+        <p>
+          ResumeForge provides a digital document service. Once your tailored resume has been generated and made available for download, the service has been delivered in full. Because the output is a digital document that is immediately accessible after payment, we are unable to offer refunds based solely on a change of mind.
+        </p>
+
+        <h3>2. When You Are Entitled to a Refund</h3>
+        <p>You are entitled to a full refund in the following circumstances:</p>
+        <ul>
+          <li>The service failed to generate a tailored resume due to a technical error on our end</li>
+          <li>Your resume content was not used in the output and the result bears no relevance to your uploaded document</li>
+          <li>You were charged but the download was not made available to you</li>
+          <li>There was a duplicate or accidental charge on your account</li>
+        </ul>
+
+        <h3>3. When Refunds Do Not Apply</h3>
+        <p>Refunds will generally not be issued in the following situations:</p>
+        <ul>
+          <li>You are dissatisfied with the quality or style of the rewritten resume but it was successfully generated and delivered</li>
+          <li>You provided an incorrect or incomplete resume file</li>
+          <li>You provided a job listing that was unclear or incomplete</li>
+          <li>You changed your mind after the resume was generated and made available</li>
+          <li>You found alternative employment or decided not to apply for the role</li>
+        </ul>
+
+        <h3>4. How to Request a Refund</h3>
+        <p>
+          To request a refund, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form within 7 days of your purchase, selecting "Refund request" as the subject and including your order details and reason for the request. We will review your request and respond within 3 business days.
+        </p>
+        <p>
+          Approved refunds will be returned to the original payment method within 5 to 10 business days, depending on your bank or card provider.
+        </p>
+
+        <h3>5. Disputes</h3>
+        <p>
+          If you are not satisfied with the outcome of your refund request, you may contact your card provider to raise a dispute, or seek assistance from the Australian Competition and Consumer Commission (ACCC) at <a href="https://www.accc.gov.au" target="_blank" rel="noopener noreferrer">accc.gov.au</a>.
+        </p>
+
+        <h3>6. Contact</h3>
+        <p>
+          For refund enquiries, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTACT
+    ============================== -->
+    <section class="legal-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+      <div class="prose">
+        <h2>Contact Us</h2>
+        <span class="effective-date">We aim to respond to all enquiries within 1 to 2 business days.</span>
+
+        <p>
+          Whether you have a question about your order, a technical issue, or a general enquiry, we are here to help. Use the options below to get in touch.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span class="c-icon" aria-hidden="true">&#9993;</span>
+            <h4>Email Support</h4>
+            <p>Use the contact form below for all order and account enquiries. We aim to respond within 1 to 2 business days.</p>
+          </div>
+          <div class="contact-card">
+            <span class="c-icon" aria-hidden="true">&#128274;</span>
+            <h4>Privacy and Legal</h4>
+            <p>For privacy and legal matters, use the contact form below and select the relevant subject.</p>
+          </div>
+          <div class="contact-card">
+            <span class="c-icon" aria-hidden="true">&#127757;</span>
+            <h4>Location</h4>
+            <p>ResumeForge is an Australian online business. We serve customers across all states and territories.</p>
+          </div>
+          <div class="contact-card">
+            <span class="c-icon" aria-hidden="true">&#128336;</span>
+            <h4>Response Times</h4>
+            <p>Monday to Friday, 9am to 5pm AWST. We aim to respond within 1 to 2 business days.</p>
+          </div>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <h3>Send Us a Message</h3>
+        <p>Fill in the form below and we will get back to you as soon as possible.</p>
+
+        <div class="contact-form-wrap">
+          <form id="contact-form" novalidate aria-labelledby="form-heading">
+            <h3 id="form-heading" class="sr-only">Contact form</h3>
+
+            <div class="form-cols">
+              <div class="form-row">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-row">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="jane@example.com.au" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" name="subject" required aria-required="true">
+                <option value="" disabled selected>Select a topic</option>
+                <option value="order">Question about my order</option>
+                <option value="refund">Refund request</option>
+                <option value="technical">Technical issue</option>
+                <option value="privacy">Privacy enquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Please describe your enquiry in as much detail as possible." required aria-required="true"></textarea>
+            </div>
+
+            <button type="button" class="btn-submit" onclick="submitForm()">Send Message</button>
+          </form>
+
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <span class="tick" aria-hidden="true">&#10003;</span>
+            <p>Thank you for your message. We will be in touch within 1 to 2 business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-logo">Resume<span>Forge</span></div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#" onclick="showPanel('terms'); return false;">Terms of Service</a>
+      <a href="#" onclick="showPanel('privacy'); return false;">Privacy Policy</a>
+      <a href="#" onclick="showPanel('refund'); return false;">Refund Policy</a>
+      <a href="#" onclick="showPanel('contact'); return false;">Contact Support</a>
+    </nav>
+    <p>
+      &copy; 2025 ResumeForge. All rights reserved.<br>
+      Proudly serving job seekers across Australia. Payments processed securely by Stripe.
+    </p>
+  </div>
+</footer>
+
+<script>
+// Handle URL hash on load so direct links work (e.g. legal.html#privacy)
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace('#', '');
+  const valid = ['terms', 'privacy', 'refund', 'contact'];
+  if (valid.includes(hash)) {
+    showPanel(hash);
+  }
+});
+
+function showPanel(id) {
+  // Update tabs
+  document.querySelectorAll('.tab-nav-btn').forEach(btn => {
+    btn.setAttribute('aria-selected', btn.id === 'tab-' + id ? 'true' : 'false');
+  });
+
+  // Show/hide panels
+  document.querySelectorAll('.legal-panel').forEach(panel => {
+    panel.hidden = panel.id !== 'panel-' + id;
+  });
+
+  // Update hash without scroll jump
+  history.replaceState(null, '', '#' + id);
+
+  // Scroll to top of content area
+  document.getElementById('legal-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Announce to screen readers
+  const labels = {
+    terms: 'Terms of Service', privacy: 'Privacy Policy',
+    refund: 'Refund Policy', contact: 'Contact Us'
+  };
+  const el = document.createElement('div');
+  el.setAttribute('role', 'status');
+  el.setAttribute('aria-live', 'polite');
+  el.className = 'sr-only';
+  el.textContent = labels[id] + ' section loaded.';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 2000);
+}
+
+function submitForm() {
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const subject = document.getElementById('cf-subject').value;
+  const message = document.getElementById('cf-message').value.trim();
+
+  if (!name || !email || !subject || !message) {
+    alert('Please fill in all fields before sending.');
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    document.getElementById('cf-email').focus();
+    return;
+  }
+
+  // In production: POST to your backend or a service like Formspree / EmailJS
+  // e.g. fetch('/api/contact', { method: 'POST', body: JSON.stringify({ name, email, subject, message }) })
+
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -569,15 +569,6 @@ footer a:hover { color: var(--gold); }
   <div class="app-card" role="region" aria-labelledby="app-heading">
     <h2 id="app-heading" class="sr-only">Resume tailoring tool</h2>
 
-    <div class="setup-notice" id="setup-notice" role="alert" aria-live="polite">
-      <strong>Setup required before going live</strong>
-      Replace the following placeholders at the top of the script block:
-      <br>- <code>ANTHROPIC_API_KEY</code> from console.anthropic.com
-      <br>- <code>STRIPE_PUBLISHABLE_KEY</code> from your Stripe Dashboard under Developers then API Keys
-      <br>- <code>PRICE_AMOUNT_CENTS</code> to set your price (999 = $9.99 AUD)
-      <br><br>For live payments, you also need a backend endpoint to create a Stripe PaymentIntent. The code has clear comments showing exactly where to add it.
-    </div>
-
     <div class="field-group">
       <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
       <div

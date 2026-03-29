@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8" />
@@ -11,7 +12,7 @@
 <title>CVEZ - Professional Resume Tailoring for Australian Job Seekers</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Nunito:wght@900&display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -153,15 +154,22 @@ header {
   color: var(--mist-light); margin-bottom: 1.5rem;
 }
 .trust-images {
-  display: flex; justify-content: center; align-items: center;
-  gap: 1.25rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .trust-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .trust-img-card {
   background: var(--bg);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   overflow: hidden;
-  width: 200px;
   box-shadow: 0 2px 8px rgba(28,23,18,0.07);
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -313,8 +321,10 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .price-info .subtitle { font-size: 0.78rem; color: var(--mist); }
 .price-amount {
-  font-family: var(--ff-display); font-size: 1.75rem;
-  font-weight: 700; color: var(--gold); white-space: nowrap;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900; color: var(--gold); white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 .price-amount small { font-size: 0.78rem; color: var(--mist); font-family: var(--ff-body); margin-left: 0.25rem; }
 
@@ -558,6 +568,7 @@ footer a:hover { color: var(--gold-light); }
   }
 }
 </style>
+
 </head>
 <body>
 
@@ -569,6 +580,7 @@ footer a:hover { color: var(--gold-light); }
 </header>
 
 <!-- HERO -->
+
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="eyebrow" aria-hidden="true">Professional Resume Tailoring</div>
@@ -603,6 +615,7 @@ footer a:hover { color: var(--gold-light); }
 </section>
 
 <!-- TRUST IMAGE BAND -->
+
 <div class="trust-band" role="complementary" aria-label="Why customers trust us">
   <p class="trust-band-label">Trusted by job seekers across Australia</p>
   <div class="trust-images">
@@ -630,6 +643,7 @@ footer a:hover { color: var(--gold-light); }
 </div>
 
 <!-- HOW IT WORKS -->
+
 <section class="steps-section" aria-labelledby="steps-heading">
   <h2 id="steps-heading" class="steps-heading">How it works</h2>
   <div class="steps-grid" role="list">
@@ -653,138 +667,143 @@ footer a:hover { color: var(--gold-light); }
 </section>
 
 <!-- MAIN APP -->
+
 <main id="main-app" class="app-wrap">
   <div class="app-card" role="region" aria-labelledby="app-heading">
     <h2 id="app-heading" class="sr-only">Resume tailoring tool</h2>
 
-    <div class="field-group">
-      <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
-      <div
-        class="upload-zone"
-        id="upload-zone"
-        role="button"
-        tabindex="0"
-        aria-labelledby="upload-label"
-        aria-describedby="upload-hint"
-      >
-        <input
-          type="file"
-          id="resume-file"
-          accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-          aria-label="Upload your resume. Accepted: PDF, Word document, PNG or JPG image"
-          aria-describedby="upload-hint"
-        />
-        <span class="upload-icon" aria-hidden="true">&#128196;</span>
-        <h3>Drop your resume here</h3>
-        <p class="upload-hint" id="upload-hint">Accepts PDF, Word (.docx), PNG or JPG</p>
-        <div class="file-chosen" id="file-name-display" aria-live="polite" role="status"></div>
-      </div>
-    </div>
+```
+<div class="field-group">
+  <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
+  <div
+    class="upload-zone"
+    id="upload-zone"
+    role="button"
+    tabindex="0"
+    aria-labelledby="upload-label"
+    aria-describedby="upload-hint"
+  >
+    <input
+      type="file"
+      id="resume-file"
+      accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+      aria-label="Upload your resume. Accepted: PDF, Word document, PNG or JPG image"
+      aria-describedby="upload-hint"
+    />
+    <span class="upload-icon" aria-hidden="true">&#128196;</span>
+    <h3>Drop your resume here</h3>
+    <p class="upload-hint" id="upload-hint">Accepts PDF, Word (.docx), PNG or JPG</p>
+    <div class="file-chosen" id="file-name-display" aria-live="polite" role="status"></div>
+  </div>
+</div>
 
-    <div class="field-group">
-      <div class="field-label" id="job-label">Step 2 - Job listing</div>
-      <div class="tab-row" role="tablist" aria-label="Choose how to enter the job listing">
-        <button
-          class="tab-btn"
-          role="tab"
-          id="tab-url-btn"
-          aria-selected="true"
-          aria-controls="tab-url-panel"
-          onclick="switchTab('url')"
-        >Fetch from URL</button>
-        <button
-          class="tab-btn"
-          role="tab"
-          id="tab-paste-btn"
-          aria-selected="false"
-          aria-controls="tab-paste-panel"
-          onclick="switchTab('paste')"
-        >Paste Text</button>
-      </div>
-
-      <div id="tab-url-panel" role="tabpanel" aria-labelledby="tab-url-btn">
-        <label for="job-url" class="sr-only">Job listing URL</label>
-        <input
-          type="text"
-          id="job-url"
-          placeholder="https://www.seek.com.au/job/12345678"
-          aria-describedby="url-hint"
-        />
-        <p id="url-hint" style="margin-top:0.5rem;font-size:0.75rem;color:var(--mist);">
-          We will attempt to fetch the listing. If it does not load, use the paste tab instead.
-        </p>
-      </div>
-
-      <div id="tab-paste-panel" role="tabpanel" aria-labelledby="tab-paste-btn" hidden>
-        <label for="job-paste" class="sr-only">Paste job description</label>
-        <textarea
-          id="job-paste"
-          rows="7"
-          placeholder="Paste the full job description text here."
-          aria-required="true"
-        ></textarea>
-      </div>
-    </div>
-
-    <div class="price-row" aria-label="Order summary">
-      <div class="price-info">
-        <div class="title">Professional Resume Tailoring</div>
-        <div class="subtitle">One-time payment. Instant download. No subscription.</div>
-      </div>
-      <div class="price-amount" id="price-display" aria-label="Price: $9.99 Australian dollars">
-        $9.99<small>AUD</small>
-      </div>
-    </div>
-
-    <div class="progress-steps" id="progress-steps" style="display:none;" role="status" aria-live="polite">
-      <span class="progress-step" id="prog-read">Reading resume</span>
-      <span class="progress-step" id="prog-fetch">Fetching listing</span>
-      <span class="progress-step" id="prog-tailor">Rewriting resume</span>
-      <span class="progress-step" id="prog-done">Complete</span>
-    </div>
-
+<div class="field-group">
+  <div class="field-label" id="job-label">Step 2 - Job listing</div>
+  <div class="tab-row" role="tablist" aria-label="Choose how to enter the job listing">
     <button
-      class="btn-primary"
-      id="cta-btn"
-      onclick="handleCTA()"
-      aria-label="Tailor my resume and proceed to payment"
-    >
-      <span>Tailor My Resume</span>
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      class="tab-btn"
+      role="tab"
+      id="tab-url-btn"
+      aria-selected="true"
+      aria-controls="tab-url-panel"
+      onclick="switchTab('url')"
+    >Fetch from URL</button>
+    <button
+      class="tab-btn"
+      role="tab"
+      id="tab-paste-btn"
+      aria-selected="false"
+      aria-controls="tab-paste-panel"
+      onclick="switchTab('paste')"
+    >Paste Text</button>
+  </div>
+
+  <div id="tab-url-panel" role="tabpanel" aria-labelledby="tab-url-btn">
+    <label for="job-url" class="sr-only">Job listing URL</label>
+    <input
+      type="text"
+      id="job-url"
+      placeholder="https://www.seek.com.au/job/12345678"
+      aria-describedby="url-hint"
+    />
+    <p id="url-hint" style="margin-top:0.5rem;font-size:0.75rem;color:var(--mist);">
+      We will attempt to fetch the listing. If it does not load, use the paste tab instead.
+    </p>
+  </div>
+
+  <div id="tab-paste-panel" role="tabpanel" aria-labelledby="tab-paste-btn" hidden>
+    <label for="job-paste" class="sr-only">Paste job description</label>
+    <textarea
+      id="job-paste"
+      rows="7"
+      placeholder="Paste the full job description text here."
+      aria-required="true"
+    ></textarea>
+  </div>
+</div>
+
+<div class="price-row" aria-label="Order summary">
+  <div class="price-info">
+    <div class="title">Professional Resume Tailoring</div>
+    <div class="subtitle">One-time payment. Instant download. No subscription.</div>
+  </div>
+  <div class="price-amount" id="price-display" aria-label="Price: $9.99 Australian dollars">
+    $9.99<small>AUD</small>
+  </div>
+</div>
+
+<div class="progress-steps" id="progress-steps" style="display:none;" role="status" aria-live="polite">
+  <span class="progress-step" id="prog-read">Reading resume</span>
+  <span class="progress-step" id="prog-fetch">Fetching listing</span>
+  <span class="progress-step" id="prog-tailor">Rewriting resume</span>
+  <span class="progress-step" id="prog-done">Complete</span>
+</div>
+
+<button
+  class="btn-primary"
+  id="cta-btn"
+  onclick="handleCTA()"
+  aria-label="Tailor my resume and proceed to payment"
+>
+  <span>Tailor My Resume</span>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<div class="status-bar" id="status-bar" role="status" aria-live="polite" aria-atomic="true">
+  <span class="spinner" aria-hidden="true"></span>
+  <span class="status-text" id="status-text">Processing...</span>
+</div>
+
+<section id="result-section" aria-labelledby="result-heading">
+  <div class="field-label" id="result-heading">Your tailored resume</div>
+  <div
+    class="result-preview"
+    id="result-preview"
+    tabindex="0"
+    role="region"
+    aria-label="Tailored resume preview. Use the download buttons below to save your file."
+  ></div>
+  <div class="download-row">
+    <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">
+      Download PDF
     </button>
+    <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">
+      Download Word (.docx)
+    </button>
+    <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">
+      Start Over
+    </button>
+  </div>
+</section>
+```
 
-    <div class="status-bar" id="status-bar" role="status" aria-live="polite" aria-atomic="true">
-      <span class="spinner" aria-hidden="true"></span>
-      <span class="status-text" id="status-text">Processing...</span>
-    </div>
-
-    <section id="result-section" aria-labelledby="result-heading">
-      <div class="field-label" id="result-heading">Your tailored resume</div>
-      <div
-        class="result-preview"
-        id="result-preview"
-        tabindex="0"
-        role="region"
-        aria-label="Tailored resume preview. Use the download buttons below to save your file."
-      ></div>
-      <div class="download-row">
-        <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">
-          Download PDF
-        </button>
-        <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">
-          Download Word (.docx)
-        </button>
-        <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">
-          Start Over
-        </button>
-      </div>
-    </section>
   </div>
 </main>
 
 <!-- TESTIMONIALS -->
+
 <section class="proof-section" aria-labelledby="reviews-heading">
   <h2 id="reviews-heading" class="proof-heading">What our customers say</h2>
   <div class="proof-grid">
@@ -807,6 +826,7 @@ footer a:hover { color: var(--gold-light); }
 </section>
 
 <!-- FAQ -->
+
 <section class="faq-section" aria-labelledby="faq-heading">
   <h2 id="faq-heading" class="faq-title">Frequently Asked Questions</h2>
 
@@ -872,6 +892,7 @@ footer a:hover { color: var(--gold-light); }
 </section>
 
 <!-- PAYMENT MODAL -->
+
 <div
   id="payment-overlay"
   role="dialog"
@@ -904,6 +925,7 @@ footer a:hover { color: var(--gold-light); }
 </div>
 
 <!-- FOOTER -->
+
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-logo">CV<span>EZ</span></div>
@@ -1401,5 +1423,6 @@ function resetAll() {
   announce('Form reset. Ready for a new resume.');
 }
 </script>
+
 </body>
 </html>

@@ -138,9 +138,7 @@ header {
   gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem;
   font-size: 0.78rem; color: var(--mist); letter-spacing: 0.02em;
 }
-.trust-strip span {
-  display: flex; align-items: center; gap: 0.4rem;
-}
+.trust-strip span { display: flex; align-items: center; gap: 0.4rem; }
 
 /* ---- TRUST IMAGE BAND ---- */
 .trust-band {
@@ -161,9 +159,7 @@ header {
   margin: 0 auto;
 }
 @media (max-width: 640px) {
-  .trust-images {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .trust-images { grid-template-columns: repeat(2, 1fr); }
 }
 .trust-img-card {
   background: var(--bg);
@@ -174,13 +170,10 @@ header {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .trust-img-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(28,23,18,0.1); }
-.trust-img-card img {
-  width: 100%; height: 120px; object-fit: cover; display: block;
-}
+.trust-img-card img { width: 100%; height: 120px; object-fit: cover; display: block; }
 .trust-img-card .card-label {
   padding: 0.6rem 0.75rem;
-  font-size: 0.75rem; font-weight: 600; color: var(--ink);
-  text-align: left;
+  font-size: 0.75rem; font-weight: 600; color: var(--ink); text-align: left;
 }
 .trust-img-card .card-sub {
   padding: 0 0.75rem 0.6rem;
@@ -199,9 +192,7 @@ header {
   color: var(--ink); text-align: center; margin-bottom: 2rem;
   letter-spacing: -0.02em;
 }
-.steps-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
-}
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 @media (max-width: 680px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 400px) { .steps-grid { grid-template-columns: 1fr; } }
 
@@ -243,7 +234,6 @@ header {
   border-radius: 18px 18px 0 0;
 }
 
-/* Field group */
 .field-group { margin-bottom: 2rem; }
 .field-label {
   font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
@@ -252,7 +242,6 @@ header {
 }
 .field-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-/* Upload zone */
 .upload-zone {
   border: 1.5px dashed var(--border); border-radius: var(--radius);
   padding: 2.5rem 1.5rem; text-align: center; cursor: pointer;
@@ -262,13 +251,10 @@ header {
 .upload-zone:hover, .upload-zone.drag-over {
   border-color: var(--gold); background: rgba(184,145,58,0.06);
 }
-.upload-zone:focus-within {
-  border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 2px;
-}
+.upload-zone:focus-within { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 2px; }
 .upload-zone.has-file { border-color: var(--gold); background: rgba(184,145,58,0.06); }
 .upload-zone input[type="file"] {
-  position: absolute; inset: 0; opacity: 0; cursor: pointer;
-  width: 100%; height: 100%;
+  position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
 }
 .upload-icon { font-size: 2.2rem; display: block; margin-bottom: 0.75rem; line-height: 1; }
 .upload-zone h3 {
@@ -276,13 +262,9 @@ header {
   color: var(--ink); margin-bottom: 0.4rem;
 }
 .upload-zone .upload-hint { font-size: 0.8rem; color: var(--mist); }
-.file-chosen {
-  margin-top: 0.8rem; font-size: 0.82rem; color: var(--gold);
-  font-weight: 600; display: none;
-}
+.file-chosen { margin-top: 0.8rem; font-size: 0.82rem; color: var(--gold); font-weight: 600; display: none; }
 .upload-zone.has-file .file-chosen { display: block; }
 
-/* Tabs */
 .tab-row { display: flex; gap: 0.5rem; margin-bottom: 0.85rem; }
 .tab-btn {
   flex: 1; padding: 0.6rem 1rem;
@@ -292,12 +274,8 @@ header {
   transition: all 0.18s; font-weight: 500;
 }
 .tab-btn:hover { border-color: var(--gold); color: var(--ink); }
-.tab-btn[aria-selected="true"] {
-  background: var(--gold); color: #fff;
-  border-color: var(--gold); font-weight: 700;
-}
+.tab-btn[aria-selected="true"] { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
 
-/* Inputs */
 textarea, input[type="text"] {
   width: 100%; background: var(--bg);
   border: 1px solid var(--border-soft); border-radius: var(--radius-sm);
@@ -308,7 +286,6 @@ textarea, input[type="text"] {
 textarea:focus, input[type="text"]:focus { border-color: var(--gold); background: #fff; }
 textarea::placeholder, input::placeholder { color: var(--mist-light); }
 
-/* Price row */
 .price-row {
   display: flex; align-items: center; justify-content: space-between;
   background: rgba(184,145,58,0.07); border: 1px solid var(--border);
@@ -328,7 +305,6 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .price-amount small { font-size: 0.78rem; color: var(--mist); font-family: var(--ff-body); margin-left: 0.25rem; }
 
-/* Buttons */
 .btn-primary {
   width: 100%; padding: 1.05rem 2rem;
   background: var(--gold); color: #fff;
@@ -364,7 +340,6 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .btn-ghost:hover { color: var(--ink); border-color: var(--mist); }
 
-/* Status */
 .status-bar {
   display: none; background: rgba(184,145,58,0.08); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.1rem 1.4rem;
@@ -379,7 +354,6 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .status-text { font-size: 0.88rem; color: var(--mist); vertical-align: middle; }
 
-/* Progress */
 .progress-steps {
   display: flex; gap: 0.5rem; justify-content: center;
   margin-bottom: 0.75rem; flex-wrap: wrap;
@@ -392,7 +366,6 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 .progress-step.active { background: rgba(184,145,58,0.12); color: var(--gold); border-color: var(--border); }
 .progress-step.done { color: var(--success); }
 
-/* Result */
 #result-section { display: none; margin-top: 2rem; border-top: 1px solid var(--border-soft); padding-top: 2rem; }
 #result-section.visible { display: block; }
 .result-preview {
@@ -447,10 +420,7 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
   justify-content: space-between; align-items: center; font-size: 0.88rem;
 }
 .order-summary .item-name { color: var(--ink); font-weight: 500; }
-.order-summary .item-price {
-  font-family: var(--ff-display); font-size: 1.1rem;
-  color: var(--gold); font-weight: 700;
-}
+.order-summary .item-price { font-family: var(--ff-display); font-size: 1.1rem; color: var(--gold); font-weight: 700; }
 #stripe-card-element {
   background: var(--bg); border: 1px solid var(--border-soft);
   border-radius: var(--radius-sm); padding: 0.95rem 1rem;
@@ -477,14 +447,12 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .proof-heading {
   font-family: var(--ff-display); font-size: 1.5rem; font-weight: 700;
-  color: var(--ink); text-align: center; margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+  color: var(--ink); text-align: center; margin-bottom: 2rem; letter-spacing: -0.02em;
 }
 .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
 @media (max-width: 620px) { .proof-grid { grid-template-columns: 1fr; } }
 .proof-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
+  background: var(--bg-card); border: 1px solid var(--border-soft);
   border-radius: var(--radius); padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(28,23,18,0.06);
   transition: box-shadow 0.2s, transform 0.2s;
@@ -501,8 +469,7 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 }
 .faq-title {
   font-family: var(--ff-display); font-size: 1.5rem; font-weight: 700;
-  color: var(--ink); margin-bottom: 1.5rem; text-align: center;
-  letter-spacing: -0.02em;
+  color: var(--ink); margin-bottom: 1.5rem; text-align: center; letter-spacing: -0.02em;
 }
 .faq-item { border-bottom: 1px solid var(--border-soft); }
 .faq-btn {
@@ -523,15 +490,10 @@ textarea::placeholder, input::placeholder { color: var(--mist-light); }
 /* ---- FOOTER ---- */
 footer {
   position: relative; z-index: 1;
-  background: #1c1712;
-  padding: 2.5rem 2rem;
-  text-align: center;
+  background: #1c1712; padding: 2.5rem 2rem; text-align: center;
 }
 .footer-inner { max-width: 860px; margin: 0 auto; }
-.footer-logo {
-  font-family: var(--ff-display); font-size: 1.3rem;
-  font-weight: 700; color: #f5f0e8; margin-bottom: 0.85rem;
-}
+.footer-logo { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 700; color: #f5f0e8; margin-bottom: 0.85rem; }
 .footer-logo span { color: var(--gold-light); }
 footer p { font-size: 0.75rem; color: rgba(245,240,232,0.4); line-height: 1.7; }
 footer a { color: rgba(245,240,232,0.45); text-decoration: underline; transition: color 0.18s; }
@@ -579,8 +541,6 @@ footer a:hover { color: var(--gold-light); }
   <div class="header-badge" aria-label="Service starting from $9.99">From $9.99</div>
 </header>
 
-<!-- HERO -->
-
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="eyebrow" aria-hidden="true">Professional Resume Tailoring</div>
@@ -614,8 +574,6 @@ footer a:hover { color: var(--gold-light); }
   </div>
 </section>
 
-<!-- TRUST IMAGE BAND -->
-
 <div class="trust-band" role="complementary" aria-label="Why customers trust us">
   <p class="trust-band-label">Trusted by job seekers across Australia</p>
   <div class="trust-images">
@@ -642,8 +600,6 @@ footer a:hover { color: var(--gold-light); }
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-
 <section class="steps-section" aria-labelledby="steps-heading">
   <h2 id="steps-heading" class="steps-heading">How it works</h2>
   <div class="steps-grid" role="list">
@@ -666,8 +622,6 @@ footer a:hover { color: var(--gold-light); }
   </div>
 </section>
 
-<!-- MAIN APP -->
-
 <main id="main-app" class="app-wrap">
   <div class="app-card" role="region" aria-labelledby="app-heading">
     <h2 id="app-heading" class="sr-only">Resume tailoring tool</h2>
@@ -675,21 +629,11 @@ footer a:hover { color: var(--gold-light); }
 ```
 <div class="field-group">
   <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
-  <div
-    class="upload-zone"
-    id="upload-zone"
-    role="button"
-    tabindex="0"
-    aria-labelledby="upload-label"
-    aria-describedby="upload-hint"
-  >
-    <input
-      type="file"
-      id="resume-file"
-      accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+  <div class="upload-zone" id="upload-zone" role="button" tabindex="0"
+    aria-labelledby="upload-label" aria-describedby="upload-hint">
+    <input type="file" id="resume-file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
       aria-label="Upload your resume. Accepted: PDF, Word document, PNG or JPG image"
-      aria-describedby="upload-hint"
-    />
+      aria-describedby="upload-hint" />
     <span class="upload-icon" aria-hidden="true">&#128196;</span>
     <h3>Drop your resume here</h3>
     <p class="upload-hint" id="upload-hint">Accepts PDF, Word (.docx), PNG or JPG</p>
@@ -700,45 +644,23 @@ footer a:hover { color: var(--gold-light); }
 <div class="field-group">
   <div class="field-label" id="job-label">Step 2 - Job listing</div>
   <div class="tab-row" role="tablist" aria-label="Choose how to enter the job listing">
-    <button
-      class="tab-btn"
-      role="tab"
-      id="tab-url-btn"
-      aria-selected="true"
-      aria-controls="tab-url-panel"
-      onclick="switchTab('url')"
-    >Fetch from URL</button>
-    <button
-      class="tab-btn"
-      role="tab"
-      id="tab-paste-btn"
-      aria-selected="false"
-      aria-controls="tab-paste-panel"
-      onclick="switchTab('paste')"
-    >Paste Text</button>
+    <button class="tab-btn" role="tab" id="tab-url-btn" aria-selected="true"
+      aria-controls="tab-url-panel" onclick="switchTab('url')">Fetch from URL</button>
+    <button class="tab-btn" role="tab" id="tab-paste-btn" aria-selected="false"
+      aria-controls="tab-paste-panel" onclick="switchTab('paste')">Paste Text</button>
   </div>
-
   <div id="tab-url-panel" role="tabpanel" aria-labelledby="tab-url-btn">
     <label for="job-url" class="sr-only">Job listing URL</label>
-    <input
-      type="text"
-      id="job-url"
-      placeholder="https://www.seek.com.au/job/12345678"
-      aria-describedby="url-hint"
-    />
+    <input type="text" id="job-url" placeholder="https://www.seek.com.au/job/12345678"
+      aria-describedby="url-hint" />
     <p id="url-hint" style="margin-top:0.5rem;font-size:0.75rem;color:var(--mist);">
       We will attempt to fetch the listing. If it does not load, use the paste tab instead.
     </p>
   </div>
-
   <div id="tab-paste-panel" role="tabpanel" aria-labelledby="tab-paste-btn" hidden>
     <label for="job-paste" class="sr-only">Paste job description</label>
-    <textarea
-      id="job-paste"
-      rows="7"
-      placeholder="Paste the full job description text here."
-      aria-required="true"
-    ></textarea>
+    <textarea id="job-paste" rows="7" placeholder="Paste the full job description text here."
+      aria-required="true"></textarea>
   </div>
 </div>
 
@@ -759,12 +681,8 @@ footer a:hover { color: var(--gold-light); }
   <span class="progress-step" id="prog-done">Complete</span>
 </div>
 
-<button
-  class="btn-primary"
-  id="cta-btn"
-  onclick="handleCTA()"
-  aria-label="Tailor my resume and proceed to payment"
->
+<button class="btn-primary" id="cta-btn" onclick="handleCTA()"
+  aria-label="Tailor my resume and proceed to payment">
   <span>Tailor My Resume</span>
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -778,31 +696,18 @@ footer a:hover { color: var(--gold-light); }
 
 <section id="result-section" aria-labelledby="result-heading">
   <div class="field-label" id="result-heading">Your tailored resume</div>
-  <div
-    class="result-preview"
-    id="result-preview"
-    tabindex="0"
-    role="region"
-    aria-label="Tailored resume preview. Use the download buttons below to save your file."
-  ></div>
+  <div class="result-preview" id="result-preview" tabindex="0" role="region"
+    aria-label="Tailored resume preview. Use the download buttons below to save your file."></div>
   <div class="download-row">
-    <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">
-      Download PDF
-    </button>
-    <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">
-      Download Word (.docx)
-    </button>
-    <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">
-      Start Over
-    </button>
+    <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">Download PDF</button>
+    <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">Download Word (.docx)</button>
+    <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">Start Over</button>
   </div>
 </section>
 ```
 
   </div>
 </main>
-
-<!-- TESTIMONIALS -->
 
 <section class="proof-section" aria-labelledby="reviews-heading">
   <h2 id="reviews-heading" class="proof-heading">What our customers say</h2>
@@ -825,65 +730,51 @@ footer a:hover { color: var(--gold-light); }
   </div>
 </section>
 
-<!-- FAQ -->
-
 <section class="faq-section" aria-labelledby="faq-heading">
   <h2 id="faq-heading" class="faq-title">Frequently Asked Questions</h2>
-
   <div class="faq-item" id="faq1">
     <button class="faq-btn" onclick="toggleFaq('faq1')" aria-expanded="false" aria-controls="faq1-answer">
-      What file types can I upload?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      What file types can I upload? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq1-answer" role="region">
       You can upload your resume as a PDF, a Word document (.docx or .doc), or an image file (PNG or JPG). All common resume formats are supported.
     </div>
   </div>
-
   <div class="faq-item" id="faq2">
     <button class="faq-btn" onclick="toggleFaq('faq2')" aria-expanded="false" aria-controls="faq2-answer">
-      Which job boards are supported?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      Which job boards are supported? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq2-answer" role="region">
       You can use listings from SEEK, Indeed, LinkedIn, Jora, CareerOne and any other job board. Paste the URL or copy and paste the full job description text directly into the input field.
     </div>
   </div>
-
   <div class="faq-item" id="faq3">
     <button class="faq-btn" onclick="toggleFaq('faq3')" aria-expanded="false" aria-controls="faq3-answer">
-      Will my personal details stay accurate?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      Will my personal details stay accurate? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq3-answer" role="region">
       Yes. All factual details including your name, contact information, work history, dates, job titles and qualifications stay exactly as they appear in your original resume. Only the language and structure are rewritten to better match the role.
     </div>
   </div>
-
   <div class="faq-item" id="faq4">
     <button class="faq-btn" onclick="toggleFaq('faq4')" aria-expanded="false" aria-controls="faq4-answer">
-      How is payment processed?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      How is payment processed? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq4-answer" role="region">
       Payments are processed securely by Stripe, a globally trusted payment platform used by thousands of Australian businesses. Your card details are never stored by CVEZ.
     </div>
   </div>
-
   <div class="faq-item" id="faq5">
     <button class="faq-btn" onclick="toggleFaq('faq5')" aria-expanded="false" aria-controls="faq5-answer">
-      Can I download the resume more than once?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      Can I download the resume more than once? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq5-answer" role="region">
       Your tailored resume is available to download immediately after payment in both PDF and Word formats. If you need to apply for different roles, each new application requires a separate order so the resume can be tailored specifically to that position.
     </div>
   </div>
-
   <div class="faq-item" id="faq6">
     <button class="faq-btn" onclick="toggleFaq('faq6')" aria-expanded="false" aria-controls="faq6-answer">
-      Is this available everywhere in Australia?
-      <span class="faq-icon" aria-hidden="true">+</span>
+      Is this available everywhere in Australia? <span class="faq-icon" aria-hidden="true">+</span>
     </button>
     <div class="faq-answer" id="faq6-answer" role="region">
       Yes. CVEZ is a fully online service available to anyone in Australia, including those in regional and remote areas. All you need is an internet connection.
@@ -891,15 +782,8 @@ footer a:hover { color: var(--gold-light); }
   </div>
 </section>
 
-<!-- PAYMENT MODAL -->
-
-<div
-  id="payment-overlay"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="payment-heading"
-  aria-describedby="payment-desc"
->
+<div id="payment-overlay" role="dialog" aria-modal="true"
+  aria-labelledby="payment-heading" aria-describedby="payment-desc">
   <div class="payment-modal">
     <button class="modal-close" onclick="closePayment()" aria-label="Close payment dialog">&#x2715;</button>
     <h2 id="payment-heading">Complete your order</h2>
@@ -923,8 +807,6 @@ footer a:hover { color: var(--gold-light); }
     </div>
   </div>
 </div>
-
-<!-- FOOTER -->
 
 <footer role="contentinfo">
   <div class="footer-inner">
@@ -954,6 +836,7 @@ let resumeText        = '';
 let tailoredText      = '';
 let stripe            = null;
 let cardElement       = null;
+let stripeElements    = null;
 let prePaymentFocusEl = null;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -964,23 +847,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('pay-btn').textContent =
     'Pay ' + CONFIG.PRICE_DISPLAY + ' AUD';
 
+  // Initialise Stripe but do NOT mount the card element yet
   if (!CONFIG.STRIPE_PUBLISHABLE_KEY.includes('YOUR_')) {
     stripe = Stripe(CONFIG.STRIPE_PUBLISHABLE_KEY);
-    const elements = stripe.elements({
+    stripeElements = stripe.elements({
       fonts: [{ cssSrc: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap' }]
     });
-    cardElement = elements.create('card', {
-      style: {
-        base: {
-          color: '#1c1712',
-          fontFamily: '"DM Sans", sans-serif',
-          fontSize: '15px',
-          '::placeholder': { color: '#8a8070' }
-        },
-        invalid: { color: '#c0392b' }
-      }
-    });
-    cardElement.mount('#stripe-card-element');
   }
 
   const zone = document.getElementById('upload-zone');
@@ -1058,11 +930,13 @@ async function handleFile(file) {
     announce('Resume loaded successfully.');
   } catch (err) {
     console.error(err);
+    resumeText = '';
     setStatus('Could not read this file. Please try a different format.', false);
     announce('Error reading file. Please try again.');
   }
 }
 
+// FIX: routes through /api/tailor instead of calling Anthropic directly
 async function extractViaAPI(file, mime, type) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -1072,13 +946,22 @@ async function extractViaAPI(file, mime, type) {
         ? { type: 'document', source: { type: 'base64', media_type: mime, data: b64 } }
         : { type: 'image',    source: { type: 'base64', media_type: mime, data: b64 } };
       try {
-        const text = await callAPI([{
-          role: 'user',
-          content: [
-            block,
-            { type: 'text', text: 'Extract all text from this resume document. Return only the plain text, preserving the structure as closely as possible.' }
-          ]
-        }]);
+        const res = await fetch('/api/tailor', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            messages: [{
+              role: 'user',
+              content: [
+                block,
+                { type: 'text', text: 'Extract all text from this resume document. Return only the plain text, preserving the structure as closely as possible.' }
+              ]
+            }]
+          }),
+        });
+        if (!res.ok) throw new Error('Extraction failed: ' + res.status);
+        const data = await res.json();
+        const text = data.content.map(b => b.text || '').filter(Boolean).join('');
         resolve(text);
       } catch (e) { reject(e); }
     };
@@ -1161,7 +1044,7 @@ async function handleCTA() {
     document.getElementById('result-preview').textContent = tailoredText;
     announce('Your tailored resume is ready. Review the preview and complete payment to download.');
 
-    if (!CONFIG.STRIPE_PUBLISHABLE_KEY.includes('YOUR_')) {
+    if (stripe) {
       openPayment();
     } else {
       document.getElementById('result-section').classList.add('visible');
@@ -1179,20 +1062,15 @@ async function handleCTA() {
 }
 
 async function callAPI(messages, system) {
-  const body = { model: 'claude-sonnet-4-20250514', max_tokens: 4000, messages };
-  if (system) body.system = system;
-
   const res = await fetch('/api/tailor', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ messages, system }),
   });
-
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.error || 'Request failed: ' + res.status);
   }
-
   const data = await res.json();
   return data.content.map(b => b.text || '').filter(Boolean).join('');
 }
@@ -1228,10 +1106,27 @@ Rewrite the resume to be perfectly tailored for this role. Return only the final
   return callAPI([{ role: 'user', content: prompt }], system);
 }
 
+// FIX: card element is only mounted when the payment modal opens, not on page load
 function openPayment() {
   prePaymentFocusEl = document.activeElement;
   const overlay = document.getElementById('payment-overlay');
   overlay.classList.add('visible');
+
+  if (stripeElements && !cardElement) {
+    cardElement = stripeElements.create('card', {
+      style: {
+        base: {
+          color: '#1c1712',
+          fontFamily: '"DM Sans", sans-serif',
+          fontSize: '15px',
+          '::placeholder': { color: '#8a8070' }
+        },
+        invalid: { color: '#c0392b' }
+      }
+    });
+    cardElement.mount('#stripe-card-element');
+  }
+
   setTimeout(() => overlay.querySelector('.modal-close').focus(), 100);
 }
 

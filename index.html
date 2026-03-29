@@ -871,10 +871,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'Pay ' + CONFIG.PRICE_DISPLAY + ' AUD';
 
   // Hide setup notice once keys are set
-  if (!CONFIG.ANTHROPIC_API_KEY.includes('YOUR_') && !CONFIG.STRIPE_PUBLISHABLE_KEY.includes('YOUR_')) {
-    const n = document.getElementById('setup-notice');
-    if (n) n.style.display = 'none';
-  }
+  const n = document.getElementById('setup-notice');
+if (n) n.style.display = 'none';
 
   // Stripe
   if (!CONFIG.STRIPE_PUBLISHABLE_KEY.includes('YOUR_')) {

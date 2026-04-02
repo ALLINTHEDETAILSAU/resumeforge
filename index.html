@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8" />
@@ -530,7 +529,6 @@ footer a:hover { color: var(--gold-light); }
   }
 }
 </style>
-
 </head>
 <body>
 
@@ -626,86 +624,83 @@ footer a:hover { color: var(--gold-light); }
   <div class="app-card" role="region" aria-labelledby="app-heading">
     <h2 id="app-heading" class="sr-only">Resume tailoring tool</h2>
 
-```
-<div class="field-group">
-  <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
-  <div class="upload-zone" id="upload-zone" role="button" tabindex="0"
-    aria-labelledby="upload-label" aria-describedby="upload-hint">
-    <input type="file" id="resume-file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-      aria-label="Upload your resume. Accepted: PDF, Word document, PNG or JPG image"
-      aria-describedby="upload-hint" />
-    <span class="upload-icon" aria-hidden="true">&#128196;</span>
-    <h3>Drop your resume here</h3>
-    <p class="upload-hint" id="upload-hint">Accepts PDF, Word (.docx), PNG or JPG</p>
-    <div class="file-chosen" id="file-name-display" aria-live="polite" role="status"></div>
-  </div>
-</div>
+    <div class="field-group">
+      <div class="field-label" id="upload-label">Step 1 - Your current resume</div>
+      <div class="upload-zone" id="upload-zone" role="button" tabindex="0"
+        aria-labelledby="upload-label" aria-describedby="upload-hint">
+        <input type="file" id="resume-file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+          aria-label="Upload your resume. Accepted: PDF, Word document, PNG or JPG image"
+          aria-describedby="upload-hint" />
+        <span class="upload-icon" aria-hidden="true">&#128196;</span>
+        <h3>Drop your resume here</h3>
+        <p class="upload-hint" id="upload-hint">Accepts PDF, Word (.docx), PNG or JPG</p>
+        <div class="file-chosen" id="file-name-display" aria-live="polite" role="status"></div>
+      </div>
+    </div>
 
-<div class="field-group">
-  <div class="field-label" id="job-label">Step 2 - Job listing</div>
-  <div class="tab-row" role="tablist" aria-label="Choose how to enter the job listing">
-    <button class="tab-btn" role="tab" id="tab-url-btn" aria-selected="true"
-      aria-controls="tab-url-panel" onclick="switchTab('url')">Fetch from URL</button>
-    <button class="tab-btn" role="tab" id="tab-paste-btn" aria-selected="false"
-      aria-controls="tab-paste-panel" onclick="switchTab('paste')">Paste Text</button>
-  </div>
-  <div id="tab-url-panel" role="tabpanel" aria-labelledby="tab-url-btn">
-    <label for="job-url" class="sr-only">Job listing URL</label>
-    <input type="text" id="job-url" placeholder="https://www.seek.com.au/job/12345678"
-      aria-describedby="url-hint" />
-    <p id="url-hint" style="margin-top:0.5rem;font-size:0.75rem;color:var(--mist);">
-      We will attempt to fetch the listing. If it does not load, use the paste tab instead.
-    </p>
-  </div>
-  <div id="tab-paste-panel" role="tabpanel" aria-labelledby="tab-paste-btn" hidden>
-    <label for="job-paste" class="sr-only">Paste job description</label>
-    <textarea id="job-paste" rows="7" placeholder="Paste the full job description text here."
-      aria-required="true"></textarea>
-  </div>
-</div>
+    <div class="field-group">
+      <div class="field-label" id="job-label">Step 2 - Job listing</div>
+      <div class="tab-row" role="tablist" aria-label="Choose how to enter the job listing">
+        <button class="tab-btn" role="tab" id="tab-url-btn" aria-selected="true"
+          aria-controls="tab-url-panel" onclick="switchTab('url')">Fetch from URL</button>
+        <button class="tab-btn" role="tab" id="tab-paste-btn" aria-selected="false"
+          aria-controls="tab-paste-panel" onclick="switchTab('paste')">Paste Text</button>
+      </div>
+      <div id="tab-url-panel" role="tabpanel" aria-labelledby="tab-url-btn">
+        <label for="job-url" class="sr-only">Job listing URL</label>
+        <input type="text" id="job-url" placeholder="https://www.seek.com.au/job/12345678"
+          aria-describedby="url-hint" />
+        <p id="url-hint" style="margin-top:0.5rem;font-size:0.75rem;color:var(--mist);">
+          We will attempt to fetch the listing. If it does not load, use the paste tab instead.
+        </p>
+      </div>
+      <div id="tab-paste-panel" role="tabpanel" aria-labelledby="tab-paste-btn" hidden>
+        <label for="job-paste" class="sr-only">Paste job description</label>
+        <textarea id="job-paste" rows="7" placeholder="Paste the full job description text here."
+          aria-required="true"></textarea>
+      </div>
+    </div>
 
-<div class="price-row" aria-label="Order summary">
-  <div class="price-info">
-    <div class="title">Professional Resume Tailoring</div>
-    <div class="subtitle">One-time payment. Instant download. No subscription.</div>
-  </div>
-  <div class="price-amount" id="price-display" aria-label="Price: $9.99 Australian dollars">
-    $9.99<small>AUD</small>
-  </div>
-</div>
+    <div class="price-row" aria-label="Order summary">
+      <div class="price-info">
+        <div class="title">Professional Resume Tailoring</div>
+        <div class="subtitle">One-time payment. Instant download. No subscription.</div>
+      </div>
+      <div class="price-amount" id="price-display" aria-label="Price: $9.99 Australian dollars">
+        $9.99<small>AUD</small>
+      </div>
+    </div>
 
-<div class="progress-steps" id="progress-steps" style="display:none;" role="status" aria-live="polite">
-  <span class="progress-step" id="prog-read">Reading resume</span>
-  <span class="progress-step" id="prog-fetch">Fetching listing</span>
-  <span class="progress-step" id="prog-tailor">Rewriting resume</span>
-  <span class="progress-step" id="prog-done">Complete</span>
-</div>
+    <div class="progress-steps" id="progress-steps" style="display:none;" role="status" aria-live="polite">
+      <span class="progress-step" id="prog-read">Reading resume</span>
+      <span class="progress-step" id="prog-fetch">Fetching listing</span>
+      <span class="progress-step" id="prog-tailor">Rewriting resume</span>
+      <span class="progress-step" id="prog-done">Complete</span>
+    </div>
 
-<button class="btn-primary" id="cta-btn" onclick="handleCTA()"
-  aria-label="Tailor my resume and proceed to payment">
-  <span>Tailor My Resume</span>
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
+    <button class="btn-primary" id="cta-btn" onclick="handleCTA()"
+      aria-label="Tailor my resume and proceed to payment">
+      <span>Tailor My Resume</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-<div class="status-bar" id="status-bar" role="status" aria-live="polite" aria-atomic="true">
-  <span class="spinner" aria-hidden="true"></span>
-  <span class="status-text" id="status-text">Processing...</span>
-</div>
+    <div class="status-bar" id="status-bar" role="status" aria-live="polite" aria-atomic="true">
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="status-text" id="status-text">Processing...</span>
+    </div>
 
-<section id="result-section" aria-labelledby="result-heading">
-  <div class="field-label" id="result-heading">Your tailored resume</div>
-  <div class="result-preview" id="result-preview" tabindex="0" role="region"
-    aria-label="Tailored resume preview. Use the download buttons below to save your file."></div>
-  <div class="download-row">
-    <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">Download PDF</button>
-    <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">Download Word (.docx)</button>
-    <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">Start Over</button>
-  </div>
-</section>
-```
-
+    <section id="result-section" aria-labelledby="result-heading">
+      <div class="field-label" id="result-heading">Your tailored resume</div>
+      <div class="result-preview" id="result-preview" tabindex="0" role="region"
+        aria-label="Tailored resume preview. Use the download buttons below to save your file."></div>
+      <div class="download-row">
+        <button class="btn-secondary" onclick="downloadPDF()" aria-label="Download tailored resume as PDF">Download PDF</button>
+        <button class="btn-secondary" onclick="downloadDOCX()" aria-label="Download tailored resume as Word document">Download Word (.docx)</button>
+        <button class="btn-ghost" onclick="resetAll()" style="margin-left:auto;" aria-label="Clear and start over">Start Over</button>
+      </div>
+    </section>
   </div>
 </main>
 
@@ -911,6 +906,22 @@ function announce(msg) {
 async function handleFile(file) {
   const ext  = file.name.split('.').pop().toLowerCase();
   const zone = document.getElementById('upload-zone');
+
+  // Client-side file size check (5MB max)
+  if (file.size > 5 * 1024 * 1024) {
+    alert('File is too large. Please upload a file under 5MB.');
+    document.getElementById('resume-file').value = '';
+    return;
+  }
+
+  // Client-side file type check
+  const ALLOWED = ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg'];
+  if (!ALLOWED.includes(ext)) {
+    alert('Unsupported file type. Please upload a PDF, Word document (.docx), PNG or JPG.');
+    document.getElementById('resume-file').value = '';
+    return;
+  }
+
   document.getElementById('file-name-display').textContent = 'Selected: ' + file.name;
   zone.classList.add('has-file');
   setStatus('Reading your resume...', true);
@@ -1148,22 +1159,28 @@ async function confirmPayment() {
   errEl.style.display = 'none';
 
   try {
-    /*
-    PRODUCTION: Replace with your backend PaymentIntent call:
-    const resp = await fetch('/api/create-payment-intent', {
+    // Create a PaymentIntent on the backend and confirm the card payment
+    const intentResp = await fetch('/api/create-payment-intent', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ amount: CONFIG.PRICE_AMOUNT_CENTS, currency: CONFIG.CURRENCY })
+      body: JSON.stringify({
+        amount: CONFIG.PRICE_AMOUNT_CENTS,
+        currency: CONFIG.CURRENCY
+      }),
     });
-    const { clientSecret } = await resp.json();
-    const { error } = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: { card: cardElement }
-    });
-    if (error) throw new Error(error.message);
-    */
 
-    const { error } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });
-    if (error) throw new Error(error.message);
+    if (!intentResp.ok) {
+      const intentErr = await intentResp.json().catch(() => ({}));
+      throw new Error(intentErr.error || 'Could not initialise payment. Please try again.');
+    }
+
+    const { clientSecret } = await intentResp.json();
+
+    const { error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: { card: cardElement },
+    });
+
+    if (confirmError) throw new Error(confirmError.message);
 
     closePayment();
     document.getElementById('result-section').classList.add('visible');
@@ -1318,6 +1335,5 @@ function resetAll() {
   announce('Form reset. Ready for a new resume.');
 }
 </script>
-
 </body>
 </html>

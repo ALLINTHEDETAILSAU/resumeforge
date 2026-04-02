@@ -729,7 +729,7 @@ function showPanel(id) {
   setTimeout(() => el.remove(), 2000);
 }
 
-function submitForm() {
+async function submitForm() {
   const name    = document.getElementById('cf-name').value.trim();
   const email   = document.getElementById('cf-email').value.trim();
   const subject = document.getElementById('cf-subject').value;
@@ -739,6 +739,35 @@ function submitForm() {
     alert('Please fill in all fields before sending.');
     return;
   }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    document.getElementById('cf-email').focus();
+    return;
+  }
+
+  const btn = document.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    const res = await fetch('https://formspree.io/f/https://formspree.io/f/mjgpevnp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message }),
+    });
+
+    if (!res.ok) throw new Error('Failed');
+
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch (err) {
+    alert('Something went wrong. Please try again or check back soon.');
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  }
+}
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {

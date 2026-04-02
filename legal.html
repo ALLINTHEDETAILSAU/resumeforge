@@ -69,7 +69,6 @@ body::before {
   border-radius: 4px;
 }
 
-/* ---- HEADER ---- */
 header {
   position: relative; z-index: 2;
   padding: 1.75rem 2rem;
@@ -95,14 +94,12 @@ header {
 }
 .back-btn:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ---- PAGE LAYOUT ---- */
 .page-wrap {
   position: relative; z-index: 1;
   max-width: 860px; margin: 0 auto;
   padding: 0 1.5rem 6rem;
 }
 
-/* ---- PAGE HERO ---- */
 .page-hero {
   padding: 4rem 0 3rem;
   text-align: center;
@@ -120,7 +117,6 @@ header {
 }
 .gold-rule { width: 50px; height: 1px; background: var(--gold); margin: 2rem auto 0; }
 
-/* ---- TAB NAV ---- */
 .tab-nav {
   display: flex; gap: 0.4rem; flex-wrap: wrap;
   margin-bottom: 2.5rem;
@@ -142,13 +138,9 @@ header {
   font-weight: 600;
 }
 
-/* ---- PANEL ---- */
-.legal-panel {
-  animation: fadeUp 0.5s var(--ease) both;
-}
+.legal-panel { animation: fadeUp 0.5s var(--ease) both; }
 .legal-panel[hidden] { display: none; }
 
-/* ---- PROSE ---- */
 .prose h2 {
   font-family: var(--ff-display);
   font-size: 1.6rem; font-weight: 700;
@@ -156,8 +148,7 @@ header {
 }
 .prose .effective-date {
   font-size: 0.78rem; color: var(--mist);
-  margin-bottom: 2rem;
-  display: block;
+  margin-bottom: 2rem; display: block;
 }
 .prose h3 {
   font-family: var(--ff-display);
@@ -168,25 +159,16 @@ header {
   font-size: 0.9rem; color: var(--mist-light);
   margin-bottom: 1rem; line-height: 1.75;
 }
-.prose ul, .prose ol {
-  margin: 0.5rem 0 1rem 1.4rem;
-}
+.prose ul, .prose ol { margin: 0.5rem 0 1rem 1.4rem; }
 .prose li {
   font-size: 0.9rem; color: var(--mist-light);
   margin-bottom: 0.45rem; line-height: 1.7;
 }
-.prose a {
-  color: var(--gold); text-decoration: underline;
-  transition: color 0.18s;
-}
+.prose a { color: var(--gold); text-decoration: underline; transition: color 0.18s; }
 .prose a:hover { color: var(--gold-light); }
 
-.divider {
-  height: 1px; background: var(--border-soft);
-  margin: 2.5rem 0;
-}
+.divider { height: 1px; background: var(--border-soft); margin: 2.5rem 0; }
 
-/* ---- CONTACT CARD ---- */
 .contact-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
   margin: 1.5rem 0;
@@ -197,20 +179,12 @@ header {
   background: var(--ink-soft); border: 1px solid var(--border-soft);
   border-radius: var(--radius); padding: 1.4rem;
 }
-.contact-card .c-icon {
-  font-size: 1.5rem; margin-bottom: 0.6rem; display: block; line-height: 1;
-}
+.contact-card .c-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; line-height: 1; }
 .contact-card h4 {
   font-family: var(--ff-display); font-size: 0.95rem;
   font-weight: 700; color: var(--cream); margin-bottom: 0.35rem;
 }
-.contact-card p {
-  font-size: 0.82rem; color: var(--mist); margin: 0; line-height: 1.55;
-}
-.contact-card a {
-  color: var(--gold); text-decoration: none; font-weight: 500;
-}
-.contact-card a:hover { text-decoration: underline; }
+.contact-card p { font-size: 0.82rem; color: var(--mist); margin: 0; line-height: 1.55; }
 
 .contact-form-wrap {
   background: var(--ink-soft); border: 1px solid var(--border);
@@ -259,17 +233,15 @@ header {
 }
 .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
 .btn-submit:active { transform: translateY(0); }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
 .form-success {
   display: none; text-align: center;
   padding: 2rem; color: var(--mist-light);
 }
-.form-success .tick {
-  font-size: 2.5rem; display: block; margin-bottom: 0.75rem;
-}
+.form-success .tick { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
 .form-success p { font-size: 0.9rem; color: var(--mist-light); }
 
-/* ---- HIGHLIGHT BOX ---- */
 .highlight-box {
   background: var(--gold-dim); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.25rem 1.4rem;
@@ -277,7 +249,6 @@ header {
 }
 .highlight-box p { margin: 0; font-size: 0.88rem; color: var(--cream); line-height: 1.7; }
 
-/* ---- FOOTER ---- */
 footer {
   position: relative; z-index: 1;
   border-top: 1px solid var(--border-soft);
@@ -292,12 +263,8 @@ footer {
 footer p { font-size: 0.75rem; color: var(--mist); line-height: 1.7; }
 footer a { color: var(--mist); text-decoration: underline; transition: color 0.18s; }
 footer a:hover { color: var(--gold); }
-.footer-links {
-  display: flex; justify-content: center; gap: 1.5rem;
-  margin-bottom: 0.85rem; flex-wrap: wrap;
-}
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
 
-/* ---- ANIMATIONS ---- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -322,8 +289,8 @@ footer a:hover { color: var(--gold); }
 <a class="skip-link" href="#legal-main">Skip to main content</a>
 
 <header role="banner">
-  <a href="index.html" class="logo" aria-label="CVEZ home">CV<span>EZ</span></a>
-  <a href="index.html" class="back-btn" aria-label="Back to the main page">
+  <a href="/" class="logo" aria-label="CVEZ home">CV<span>EZ</span></a>
+  <a href="/" class="back-btn" aria-label="Back to the main page">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
       <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -339,7 +306,6 @@ footer a:hover { color: var(--gold); }
     <div class="gold-rule" aria-hidden="true"></div>
   </div>
 
-  <!-- Tab navigation -->
   <nav aria-label="Legal sections" class="tab-nav" role="tablist">
     <button class="tab-nav-btn" role="tab" id="tab-terms"   aria-selected="true"  aria-controls="panel-terms"   onclick="showPanel('terms')">Terms of Service</button>
     <button class="tab-nav-btn" role="tab" id="tab-privacy" aria-selected="false" aria-controls="panel-privacy" onclick="showPanel('privacy')">Privacy Policy</button>
@@ -349,39 +315,20 @@ footer a:hover { color: var(--gold); }
 
   <main id="legal-main">
 
-    <!-- ==============================
-         TERMS OF SERVICE
-    ============================== -->
+    <!-- TERMS -->
     <section class="legal-panel" id="panel-terms" role="tabpanel" aria-labelledby="tab-terms">
       <div class="prose">
         <h2>Terms of Service</h2>
         <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
-
-        <p>
-          Please read these Terms of Service carefully before using the CVEZ website and service. By accessing or using our service, you agree to be bound by these terms. If you do not agree, do not use the service.
-        </p>
-
+        <p>Please read these Terms of Service carefully before using the CVEZ website and service. By accessing or using our service, you agree to be bound by these terms. If you do not agree, do not use the service.</p>
         <h3>1. About the Service</h3>
-        <p>
-          CVEZ provides an online resume tailoring service that rewrites and reformats your existing resume to better align with a specific job listing you provide. The service is operated from Australia and is available to users across Australia and internationally.
-        </p>
-        <p>
-          CVEZ is not a recruitment agency and does not guarantee employment outcomes. We provide a document preparation service only.
-        </p>
-
+        <p>CVEZ provides an online resume tailoring service that rewrites and reformats your existing resume to better align with a specific job listing you provide. The service is operated from Australia and is available to users across Australia and internationally.</p>
+        <p>CVEZ is not a recruitment agency and does not guarantee employment outcomes. We provide a document preparation service only.</p>
         <h3>2. Eligibility</h3>
-        <p>
-          You must be at least 18 years of age to use this service. By using CVEZ you confirm that you are 18 or older and have the legal capacity to enter into a binding agreement.
-        </p>
-
+        <p>You must be at least 18 years of age to use this service. By using CVEZ you confirm that you are 18 or older and have the legal capacity to enter into a binding agreement.</p>
         <h3>3. Your Content</h3>
-        <p>
-          You retain ownership of any resume or document content you upload. By submitting your content you grant CVEZ a limited, non-exclusive licence to process and rewrite that content for the sole purpose of delivering your order. We do not use your personal resume data for any other purpose.
-        </p>
-        <p>
-          You are responsible for ensuring that the information in your resume is truthful and accurate. CVEZ rewrites the language and structure of your resume but does not verify the factual accuracy of the content you provide.
-        </p>
-
+        <p>You retain ownership of any resume or document content you upload. By submitting your content you grant CVEZ a limited, non-exclusive licence to process and rewrite that content for the sole purpose of delivering your order. We do not use your personal resume data for any other purpose.</p>
+        <p>You are responsible for ensuring that the information in your resume is truthful and accurate. CVEZ rewrites the language and structure of your resume but does not verify the factual accuracy of the content you provide.</p>
         <h3>4. Acceptable Use</h3>
         <p>You agree not to use this service to:</p>
         <ul>
@@ -391,68 +338,35 @@ footer a:hover { color: var(--gold); }
           <li>Resell or redistribute the output of the service without our written consent</li>
           <li>Violate any applicable Australian law or regulation</li>
         </ul>
-
         <h3>5. Payment</h3>
-        <p>
-          All prices are displayed in Australian dollars (AUD) inclusive of GST where applicable. Payment is processed securely by Stripe. You must provide valid payment details at the time of purchase. Charges are applied immediately upon completing your order.
-        </p>
-
+        <p>All prices are displayed in Australian dollars (AUD) inclusive of GST where applicable. Payment is processed securely by Stripe. You must provide valid payment details at the time of purchase. Charges are applied immediately upon completing your order.</p>
         <h3>6. Delivery</h3>
-        <p>
-          Your tailored resume is made available for download immediately after successful payment. It is your responsibility to download the file at the time of purchase. CVEZ does not store your completed resume after your session ends.
-        </p>
-
+        <p>Your tailored resume is made available for download immediately after successful payment. It is your responsibility to download the file at the time of purchase. CVEZ does not store your completed resume after your session ends.</p>
         <h3>7. Intellectual Property</h3>
-        <p>
-          The CVEZ brand, website design, and underlying technology are the property of CVEZ and are protected by Australian intellectual property law. The tailored resume document delivered to you is yours to use freely for personal job application purposes.
-        </p>
-
+        <p>The CVEZ brand, website design, and underlying technology are the property of CVEZ and are protected by Australian intellectual property law. The tailored resume document delivered to you is yours to use freely for personal job application purposes.</p>
         <h3>8. Disclaimer of Warranties</h3>
-        <p>
-          The service is provided on an "as is" basis. CVEZ makes no warranty that the service will be uninterrupted, error-free, or that the tailored resume will result in employment. To the maximum extent permitted by Australian Consumer Law, we disclaim all implied warranties.
-        </p>
-        <p>
-          Nothing in these terms excludes, restricts or modifies any rights or remedies you may have under the Australian Consumer Law, including any non-excludable guarantees.
-        </p>
-
+        <p>The service is provided on an "as is" basis. CVEZ makes no warranty that the service will be uninterrupted, error-free, or that the tailored resume will result in employment. To the maximum extent permitted by Australian Consumer Law, we disclaim all implied warranties.</p>
+        <p>Nothing in these terms excludes, restricts or modifies any rights or remedies you may have under the Australian Consumer Law, including any non-excludable guarantees.</p>
         <h3>9. Limitation of Liability</h3>
-        <p>
-          To the extent permitted by law, CVEZ's total liability to you for any claim arising from use of the service is limited to the amount you paid for the specific order that gave rise to the claim.
-        </p>
-
+        <p>To the extent permitted by law, CVEZ's total liability to you for any claim arising from use of the service is limited to the amount you paid for the specific order that gave rise to the claim.</p>
         <h3>10. Governing Law</h3>
-        <p>
-          These terms are governed by the laws of Western Australia, Australia. Any disputes are subject to the non-exclusive jurisdiction of the courts of Western Australia.
-        </p>
-
+        <p>These terms are governed by the laws of Western Australia, Australia. Any disputes are subject to the non-exclusive jurisdiction of the courts of Western Australia.</p>
         <h3>11. Changes to These Terms</h3>
-        <p>
-          We may update these terms from time to time. The effective date at the top of this page will reflect any changes. Continued use of the service after changes are posted constitutes your acceptance of the revised terms.
-        </p>
-
+        <p>We may update these terms from time to time. The effective date at the top of this page will reflect any changes. Continued use of the service after changes are posted constitutes your acceptance of the revised terms.</p>
         <h3>12. Contact</h3>
-        <p>
-          For questions about these terms, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.
-        </p>
+        <p>For questions about these terms, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.</p>
       </div>
     </section>
 
-    <!-- ==============================
-         PRIVACY POLICY
-    ============================== -->
+    <!-- PRIVACY -->
     <section class="legal-panel" id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy" hidden>
       <div class="prose">
         <h2>Privacy Policy</h2>
         <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
-
-        <p>
-          CVEZ is committed to protecting your personal information in accordance with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth). This policy explains what information we collect, how we use it, and your rights.
-        </p>
-
+        <p>CVEZ is committed to protecting your personal information in accordance with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth). This policy explains what information we collect, how we use it, and your rights.</p>
         <div class="highlight-box">
           <p><strong>Short version:</strong> We collect only what we need to deliver your resume. We do not sell your data. Your resume content is processed to complete your order and is not stored after your session.</p>
         </div>
-
         <h3>1. Information We Collect</h3>
         <p>We may collect the following types of information:</p>
         <ul>
@@ -462,7 +376,6 @@ footer a:hover { color: var(--gold); }
           <li><strong>Contact information</strong> - your name and email address if you contact us or submit a support request</li>
           <li><strong>Usage data</strong> - standard web analytics including pages visited, browser type, device type, and general location (country or state level only)</li>
         </ul>
-
         <h3>2. How We Use Your Information</h3>
         <p>We use the information we collect to:</p>
         <ul>
@@ -473,12 +386,8 @@ footer a:hover { color: var(--gold); }
           <li>Comply with legal obligations</li>
         </ul>
         <p>We do not use your resume content for marketing purposes, profiling, or any purpose other than fulfilling your order.</p>
-
         <h3>3. Data Retention</h3>
-        <p>
-          Your resume content and the tailored output are not stored on our servers after your session ends. Please download your completed resume at the time of purchase. Payment transaction records are retained by Stripe in accordance with their own privacy policy and applicable financial regulations.
-        </p>
-
+        <p>Your resume content and the tailored output are not stored on our servers after your session ends. Please download your completed resume at the time of purchase. Payment transaction records are retained by Stripe in accordance with their own privacy policy and applicable financial regulations.</p>
         <h3>4. Third-Party Services</h3>
         <p>We use the following third-party services to operate our platform:</p>
         <ul>
@@ -486,22 +395,12 @@ footer a:hover { color: var(--gold); }
           <li><strong>Anthropic</strong> - the technology that powers our resume rewriting. Resume content is transmitted to Anthropic's API to generate the tailored output. Anthropic's privacy policy is available at <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
           <li><strong>Google Fonts</strong> - used to load fonts on this website. No personal data is shared with Google through this service</li>
         </ul>
-
         <h3>5. Disclosure of Information</h3>
-        <p>
-          We do not sell, rent or trade your personal information to third parties. We may disclose your information where required by law, court order, or government authority, or where necessary to protect the rights and safety of CVEZ or others.
-        </p>
-
+        <p>We do not sell, rent or trade your personal information to third parties. We may disclose your information where required by law, court order, or government authority, or where necessary to protect the rights and safety of CVEZ or others.</p>
         <h3>6. Security</h3>
-        <p>
-          We take reasonable steps to protect any personal information we hold from misuse, loss, and unauthorised access. All data transmission between your browser and our service is encrypted using HTTPS. Payment data is handled entirely by Stripe and is never transmitted to or stored by CVEZ.
-        </p>
-
+        <p>We take reasonable steps to protect any personal information we hold from misuse, loss, and unauthorised access. All data transmission between your browser and our service is encrypted using HTTPS. Payment data is handled entirely by Stripe and is never transmitted to or stored by CVEZ.</p>
         <h3>7. Cookies and Tracking</h3>
-        <p>
-          We may use cookies or similar technologies to support basic website functionality. We do not use cookies to track you across other websites or build advertising profiles.
-        </p>
-
+        <p>We may use cookies or similar technologies to support basic website functionality. We do not use cookies to track you across other websites or build advertising profiles.</p>
         <h3>8. Your Rights</h3>
         <p>Under the Australian Privacy Act you have the right to:</p>
         <ul>
@@ -509,43 +408,24 @@ footer a:hover { color: var(--gold); }
           <li>Request correction of inaccurate or out-of-date information</li>
           <li>Complain about how we have handled your personal information</li>
         </ul>
-        <p>
-          To exercise any of these rights, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page and select "Privacy enquiry" as the subject. We will respond within 30 days.
-        </p>
-        <p>
-          If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
-        </p>
-
+        <p>To exercise any of these rights, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page and select "Privacy enquiry" as the subject. We will respond within 30 days.</p>
+        <p>If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.</p>
         <h3>9. Changes to This Policy</h3>
-        <p>
-          We may update this privacy policy from time to time. The effective date at the top of this page will reflect any changes. We encourage you to review this policy periodically.
-        </p>
+        <p>We may update this privacy policy from time to time. The effective date at the top of this page will reflect any changes. We encourage you to review this policy periodically.</p>
       </div>
     </section>
 
-    <!-- ==============================
-         REFUND POLICY
-    ============================== -->
+    <!-- REFUND -->
     <section class="legal-panel" id="panel-refund" role="tabpanel" aria-labelledby="tab-refund" hidden>
       <div class="prose">
         <h2>Refund Policy</h2>
         <span class="effective-date">Effective date: 1 January 2025. Last updated: 1 January 2025.</span>
-
-        <p>
-          We want you to be happy with your tailored resume. Please read this policy carefully so you understand when refunds apply.
-        </p>
-
+        <p>We want you to be happy with your tailored resume. Please read this policy carefully so you understand when refunds apply.</p>
         <div class="highlight-box">
-          <p>
-            <strong>Australian Consumer Law:</strong> Nothing in this refund policy limits or excludes your rights under the Australian Consumer Law (ACL), including your right to a remedy for a failure that is a major failure or is not of acceptable quality.
-          </p>
+          <p><strong>Australian Consumer Law:</strong> Nothing in this refund policy limits or excludes your rights under the Australian Consumer Law (ACL), including your right to a remedy for a failure that is a major failure or is not of acceptable quality.</p>
         </div>
-
         <h3>1. Nature of the Service</h3>
-        <p>
-          CVEZ provides a digital document service. Once your tailored resume has been generated and made available for download, the service has been delivered in full. Because the output is a digital document that is immediately accessible after payment, we are unable to offer refunds based solely on a change of mind.
-        </p>
-
+        <p>CVEZ provides a digital document service. Once your tailored resume has been generated and made available for download, the service has been delivered in full. Because the output is a digital document that is immediately accessible after payment, we are unable to offer refunds based solely on a change of mind.</p>
         <h3>2. When You Are Entitled to a Refund</h3>
         <p>You are entitled to a full refund in the following circumstances:</p>
         <ul>
@@ -554,7 +434,6 @@ footer a:hover { color: var(--gold); }
           <li>You were charged but the download was not made available to you</li>
           <li>There was a duplicate or accidental charge on your account</li>
         </ul>
-
         <h3>3. When Refunds Do Not Apply</h3>
         <p>Refunds will generally not be issued in the following situations:</p>
         <ul>
@@ -564,38 +443,22 @@ footer a:hover { color: var(--gold); }
           <li>You changed your mind after the resume was generated and made available</li>
           <li>You found alternative employment or decided not to apply for the role</li>
         </ul>
-
         <h3>4. How to Request a Refund</h3>
-        <p>
-          To request a refund, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form within 7 days of your purchase, selecting "Refund request" as the subject and including your order details and reason for the request. We will review your request and respond within 3 business days.
-        </p>
-        <p>
-          Approved refunds will be returned to the original payment method within 5 to 10 business days, depending on your bank or card provider.
-        </p>
-
+        <p>To request a refund, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form within 7 days of your purchase, selecting "Refund request" as the subject and including your order details and reason for the request. We will review your request and respond within 3 business days.</p>
+        <p>Approved refunds will be returned to the original payment method within 5 to 10 business days, depending on your bank or card provider.</p>
         <h3>5. Disputes</h3>
-        <p>
-          If you are not satisfied with the outcome of your refund request, you may contact your card provider to raise a dispute, or seek assistance from the Australian Competition and Consumer Commission (ACCC) at <a href="https://www.accc.gov.au" target="_blank" rel="noopener noreferrer">accc.gov.au</a>.
-        </p>
-
+        <p>If you are not satisfied with the outcome of your refund request, you may contact your card provider to raise a dispute, or seek assistance from the Australian Competition and Consumer Commission (ACCC) at <a href="https://www.accc.gov.au" target="_blank" rel="noopener noreferrer">accc.gov.au</a>.</p>
         <h3>6. Contact</h3>
-        <p>
-          For refund enquiries, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.
-        </p>
+        <p>For refund enquiries, please use the <a href="#" onclick="showPanel('contact'); return false;">Contact Us</a> form on this page.</p>
       </div>
     </section>
 
-    <!-- ==============================
-         CONTACT
-    ============================== -->
+    <!-- CONTACT -->
     <section class="legal-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
       <div class="prose">
         <h2>Contact Us</h2>
         <span class="effective-date">We aim to respond to all enquiries within 1 to 2 business days.</span>
-
-        <p>
-          Whether you have a question about your order, a technical issue, or a general enquiry, we are here to help. Use the options below to get in touch.
-        </p>
+        <p>Whether you have a question about your order, a technical issue, or a general enquiry, we are here to help. Use the options below to get in touch.</p>
 
         <div class="contact-grid">
           <div class="contact-card">
@@ -628,7 +491,6 @@ footer a:hover { color: var(--gold); }
         <div class="contact-form-wrap">
           <form id="contact-form" novalidate aria-labelledby="form-heading">
             <h3 id="form-heading" class="sr-only">Contact form</h3>
-
             <div class="form-cols">
               <div class="form-row">
                 <label for="cf-name">Full Name</label>
@@ -639,7 +501,6 @@ footer a:hover { color: var(--gold); }
                 <input type="email" id="cf-email" name="email" placeholder="jane@example.com.au" required autocomplete="email" />
               </div>
             </div>
-
             <div class="form-row">
               <label for="cf-subject">Subject</label>
               <select id="cf-subject" name="subject" required aria-required="true">
@@ -651,12 +512,10 @@ footer a:hover { color: var(--gold); }
                 <option value="other">Other</option>
               </select>
             </div>
-
             <div class="form-row">
               <label for="cf-message">Message</label>
               <textarea id="cf-message" name="message" rows="5" placeholder="Please describe your enquiry in as much detail as possible." required aria-required="true"></textarea>
             </div>
-
             <button type="button" class="btn-submit" onclick="submitForm()">Send Message</button>
           </form>
 
@@ -665,7 +524,6 @@ footer a:hover { color: var(--gold); }
             <p>Thank you for your message. We will be in touch within 1 to 2 business days.</p>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -689,7 +547,6 @@ footer a:hover { color: var(--gold); }
 </footer>
 
 <script>
-// Handle URL hash on load so direct links work (e.g. legal.html#privacy)
 document.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#', '');
   const valid = ['terms', 'privacy', 'refund', 'contact'];
@@ -699,23 +556,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function showPanel(id) {
-  // Update tabs
   document.querySelectorAll('.tab-nav-btn').forEach(btn => {
     btn.setAttribute('aria-selected', btn.id === 'tab-' + id ? 'true' : 'false');
   });
-
-  // Show/hide panels
   document.querySelectorAll('.legal-panel').forEach(panel => {
     panel.hidden = panel.id !== 'panel-' + id;
   });
-
-  // Update hash without scroll jump
   history.replaceState(null, '', '#' + id);
-
-  // Scroll to top of content area
   document.getElementById('legal-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  // Announce to screen readers
   const labels = {
     terms: 'Terms of Service', privacy: 'Privacy Policy',
     refund: 'Refund Policy', contact: 'Contact Us'
@@ -752,7 +600,7 @@ async function submitForm() {
   btn.textContent = 'Sending...';
 
   try {
-    const res = await fetch('https://formspree.io/f/https://formspree.io/f/mjgpevnp', {
+    const res = await fetch('https://formspree.io/f/mjgpevnp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
@@ -767,20 +615,6 @@ async function submitForm() {
     btn.disabled = false;
     btn.textContent = 'Send Message';
   }
-}
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address.');
-    document.getElementById('cf-email').focus();
-    return;
-  }
-
-  // In production: POST to your backend or a service like Formspree / EmailJS
-  // e.g. fetch('/api/contact', { method: 'POST', body: JSON.stringify({ name, email, subject, message }) })
-
-  document.getElementById('contact-form').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
 }
 </script>
 
